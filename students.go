@@ -507,11 +507,7 @@ type AddressInput struct {
 }
 
 // CreateStudent creates a student.
-func (c *Client) CreateStudent(
-	ctx context.Context,
-	studentID int64,
-	input CreateStudentInput,
-) (Student, int, error) {
+func (c *Client) CreateStudent(ctx context.Context, input CreateStudentInput) (Student, int, error) {
 	var student Student
 
 	body, err := json.Marshal(input)
